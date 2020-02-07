@@ -1,0 +1,32 @@
+<div id="clouds">
+    <div class="cloud x1"></div>
+    <div class="cloud x2"></div>
+    <div class="cloud x3"></div>
+    <div class="cloud x4"></div>
+    <div class="cloud x5"></div>
+</div>
+
+<div class="container form-container">
+    <div class="avatar">
+        <img src="../../../assets/images/diary-icon.png">
+    </div>
+    <h2 class="text-center">Register to your Kiara</h2>
+
+    <form [formGroup]="registration" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>E-mail:</label><input formControlName="email" type="email" [class.is-invalid]="email.invalid && email.touched" class="form-control" placeholder="Type your e-mail here..." required>
+        </div>
+        <div class="form-group">
+            <label>Password:</label><input type="password" class="form-control" formControlName="password" placeholder="Type your password here..." required>
+        </div>
+        <div class="form-group">
+            <label>Confirm password:</label><input type="password" class="form-control" [class.is-invalid]="registration.errors?.mismatch" formControlName="confirm_pass" placeholder="Confirm your password..." required>
+            <small class="text-danger" *ngIf="registration.errors?.mismatch">Confirm your password</small>
+        </div><br>
+        <div *ngIf="errmessage" class="text-danger">{{errmessage}}</div>
+        <button id="reg" type="submit" mat-raised-button color="primary">Register</button>
+    </form>
+    <div class="text-center">
+        Already have an accout?<a routerLink="../login"> Login</a>
+    </div>
+</div>

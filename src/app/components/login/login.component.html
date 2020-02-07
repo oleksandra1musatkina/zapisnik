@@ -1,0 +1,47 @@
+<div id="clouds">
+    <div class="cloud x1"></div>
+    <div class="cloud x2"></div>
+    <div class="cloud x3"></div>
+    <div class="cloud x4"></div>
+    <div class="cloud x5"></div>
+</div>
+
+<div class="container">
+    <div class="container form-container">
+        <div class="avatar">
+            <img src="../../../assets/images/diary-icon.png">
+        </div>
+
+
+        <h2 class="text-center">Login to your Kiara</h2>
+        <div class="logindiv">
+            <div>
+                <!-- tu je vytvoreny formular pre prihlasovanie -->
+                <!-- je tu napisane ze data sa maju vlozit do premennej user a po stlaceni na prihlasit sa vykopna funkcia onSubmit -->
+                <form [formGroup]="user" (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label>E-mail:</label><input type="email" class="form-control" formControlName="email" placeholder="Type your e-mail here..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password:</label><input type="password" class="form-control" formControlName="password" placeholder="Type your password here..." required>
+                    </div><br>
+                    <div class="text-danger" *ngIf="errormessage" style="margin-bottom:20px;">{{errormessage}}</div>
+                    <button id="email" mat-raised-button type="submit" color="primary">Login</button>
+
+                </form>
+            </div>
+
+            <!-- tlacidlo pre google login -->
+
+            <button id="google" mat-raised-button (click)="loginwithgoogle()" class="mb-3">Login With Google</button>
+
+            <div class="text-center">
+                <a routerLink="../register">No account? Create one here</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>

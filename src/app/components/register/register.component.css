@@ -1,0 +1,297 @@
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+input {
+    padding: 1.3em 1em;
+    font-size: 1.3em;
+    border: 1px solid #bbbbbb;
+}
+
+input[type="email"],
+input[type="password"] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 97%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+}
+
+input[type="email"]:placeholder,
+input[type="password"]:placeholder {
+    color: #cccccc;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.container {
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.3);
+}
+
+.form-container {
+    background: white;
+    padding: 3.5em;
+    width: 500px;
+}
+
+#reg {
+    border: 1px solid #95989a;
+    color: black;
+    background-color: #bfd2e0;
+}
+
+
+/* ---------- FONTAWESOME ---------- */
+
+[class*="fontawesome-"]:before {
+    font-family: "FontAwesome", sans-serif;
+}
+
+
+/* ---------- GENERAL ---------- */
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #2c3338;
+    color: #606468;
+    font: 87.5%/1.5em "Open Sans", sans-serif;
+    margin: 0;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+a {
+    color: rgba(107, 107, 107, 0.774);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+.container {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.text-danger {
+    text-align: center;
+}
+
+.avatar img {
+    width: 105px;
+    height: 105px;
+    border-radius: 100px;
+    margin: auto;
+    border: 3px solid #fff;
+    display: block;
+}
+
+button {
+    padding: 0.5em;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 1.3em !important;
+}
+
+
+/*Lets start with the cloud formation rather*/
+
+
+/*The container will also serve as the SKY*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#clouds {
+    overflow-x: hidden;
+    padding: 50px 0;
+    background: #c9dbe9;
+    height: 100%;
+    background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+    background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+    background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+}
+
+
+/*Time to finalise the cloud shape*/
+
+.cloud {
+    width: 200px;
+    height: 60px;
+    background: #fff;
+    border-radius: 200px;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    position: relative;
+}
+
+.cloud:before,
+.cloud:after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+    width: 120px;
+    height: 120px;
+    top: -55px;
+    left: auto;
+    right: 15px;
+}
+
+
+/*Time to animate*/
+
+.x1 {
+    -webkit-animation: moveclouds 15s linear infinite;
+    -moz-animation: moveclouds 15s linear infinite;
+    -o-animation: moveclouds 15s linear infinite;
+}
+
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+
+.x2 {
+    left: 200px;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.6;
+    /*opacity proportional to the size*/
+    /*Speed will also be proportional to the size and opacity*/
+    /*More the speed. Less the time in 's' = seconds*/
+    -webkit-animation: moveclouds 25s linear infinite;
+    -moz-animation: moveclouds 25s linear infinite;
+    -o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+    left: -250px;
+    top: -200px;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8;
+    /*opacity proportional to the size*/
+    -webkit-animation: moveclouds 20s linear infinite;
+    -moz-animation: moveclouds 20s linear infinite;
+    -o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+    left: 470px;
+    top: -250px;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+    opacity: 0.75;
+    /*opacity proportional to the size*/
+    -webkit-animation: moveclouds 18s linear infinite;
+    -moz-animation: moveclouds 18s linear infinite;
+    -o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+    left: -150px;
+    top: -150px;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8;
+    /*opacity proportional to the size*/
+    -webkit-animation: moveclouds 20s linear infinite;
+    -moz-animation: moveclouds 20s linear infinite;
+    -o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+    0% {
+        margin-left: 1000px;
+    }
+    100% {
+        margin-left: -1000px;
+    }
+}
+
+@-moz-keyframes moveclouds {
+    0% {
+        margin-left: 1000px;
+    }
+    100% {
+        margin-left: -1000px;
+    }
+}
+
+@-o-keyframes moveclouds {
+    0% {
+        margin-left: 1000px;
+    }
+    100% {
+        margin-left: -1000px;
+    }
+}

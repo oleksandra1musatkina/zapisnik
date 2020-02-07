@@ -1,0 +1,75 @@
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.header {
+  margin-left: -100px;
+  position: relative;
+  left: 50%;
+}
+
+textarea {
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.3);
+  resize: none;
+}
+
+.textar {
+  min-width: 100%;
+  border-radius: 25px;
+  padding: 2%;
+}
+
+textarea {
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 0.5px solid #c9dbe9;
+  font-size: 18px;
+}
+
+textarea:focus {
+  box-shadow: 0 0 5px #075d96;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #c9dbe9;
+}
+
+label {
+  font-size: 20px;
+}
+
+input#file {
+  display: inline-block;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 365px 0 0 0;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-size: 60px 60px;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 15px;
+}
+
+input#file:focus {
+  box-shadow: 0 0 5px #075d96;
+}
+
+#datepicker {
+  border: none;
+  border-bottom: 0.5px solid black;
+  border-radius: 5px;
+    padding: 1%;
+}
+
+#submit {
+  height: 40px;
+  margin-bottom: 2%;
+}
+
+.progress {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}

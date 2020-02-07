@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin:0px;
+    height:100%;
+    overflow-x: hidden;
+}
+
+mat-sidenav{
+    height:100%;
+    width:240px;
+}
+
+.mat-drawer-content { 
+    background-color: #c9dbe9;
+}
