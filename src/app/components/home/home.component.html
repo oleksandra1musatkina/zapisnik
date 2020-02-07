@@ -6,36 +6,25 @@
     <div class="cloud x5"></div>
 </div>
 
-<!-- stranka je rozdelena na 2 casti. Jedna v ktorej sa zobrazuje zoznam pribehov a druha v ktorej sa zobrazuje detail pribehu -->
 
 <div class="container">
-    <!-- tu je vytvorenie zoznamu veci v denniku -->
     <div class="header">
         <h3><span>- Your Diary -</span></h3>
     </div>
-    <!-- ngIf => ak je premenna show true tak sa toto div zobrazi. ak je false tak sa nezobrazi -->
     <div *ngIf="show" class="diarylist">
-        <!-- ngFor => zoberie premennu lists2 a spravy for. pre kazdu polozku sa teda vytvori nove duv -->
-        <!-- polozka ktora sa vyberie s pola lists2 sa vlozi do premennej details -->
+      
         <div *ngFor="let details of lists2 " class="list-group">
-            <!-- po kliknuti na riadok sa zavola funkcia getDetails(ako parameter sa jej vlozia informacie o riadku (details)) -->
             <div class="list-group-item" id="listitems" (click)="getdetails(details)">
-                <!-- {{ premenna }} => tieto zatvorky znamenaju vypisat hodnotu do html -->
                 <label>{{details.date}}</label>
             </div>
         </div>
     </div>
-    <!-- po tade je zobrazovanie zoznamu dennika -->
-
-    <!-- tu je zobrazovanie detailu po kliknuti -->
-    <!-- pouzita je bootstrap karta a zobrazi sa ked je premenna show == false -->
+  
     <div class="card" *ngIf="!show">
         <div class="card-header">
-            <!-- tlacidlo back zmeni show na true => teda zmizne tato karta a objavy sa naspet zoznam  -->
             <button class="basic-btn" (click)="show=true"><i class="material-icons">
           arrow_back
         </i>Back</button>
-            <!-- tlacidlo delete odsytani dokument zavolanim funkcie deleteDoc() kam sa posle id zaznamu ktory sa ma vymazat -->
             <button class="basic-btn" (click)="deleteDoc(details.id)"><i class="material-icons">
 delete_sweep 
      </i>Delete</button>
@@ -44,11 +33,9 @@ delete_sweep
         <div class="card-body">
             <div class="row">
                 <div class="col-md-3">
-                    <!-- zobrazi ulozeny obrazok z firebase -->
                     <img src="{{details.imageName}}" alt="Image of the day" class="img-responsive fit-image">
                 </div>
                 <div class="col md-9">
-                    <!-- do tela bootstrapovej karty sa vlozy text dennika -->
                     <p class="text-justify">{{details.data}}</p>
                 </div>
             </div>
