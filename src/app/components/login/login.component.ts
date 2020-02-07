@@ -41,14 +41,11 @@ export class LoginComponent implements OnInit {
   }
 
   logout() {
-    // funkcia pre logout
     this.loginservice.logout();
   }
 
   onSubmit() {
-    // po kliknuti na tlacidlo prihlasit 
     console.log(this.user.value);
-    //skontroliuje sa ci pasuje meno heslo pomocou login service
     this.loginservice.signinwithemail(this.user.value).then(
       res => {
 
