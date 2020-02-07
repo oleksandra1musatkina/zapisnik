@@ -16,8 +16,7 @@
         <h2 class="text-center">Login to your Kiara</h2>
         <div class="logindiv">
             <div>
-                <!-- tu je vytvoreny formular pre prihlasovanie -->
-                <!-- je tu napisane ze data sa maju vlozit do premennej user a po stlaceni na prihlasit sa vykopna funkcia onSubmit -->
+               
                 <form [formGroup]="user" (ngSubmit)="onSubmit()">
 
                     <div class="form-group">
@@ -33,7 +32,6 @@
                 </form>
             </div>
 
-            <!-- tlacidlo pre google login -->
 
             <button id="google" mat-raised-button (click)="loginwithgoogle()" class="mb-3">Login With Google</button>
 
